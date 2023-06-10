@@ -1,0 +1,76 @@
+<%- include('../partials/head') %>
+
+    
+  <%- include('../partials/navbar') %>
+  <div class="bg-dark p-1 text-light">
+    <div class="container">
+   <h5><%=n%></h5> 
+  
+
+   <div class="row">
+    <div class="col-6 offset-3">
+        <%- include('../partials/flash') %>
+      <p class="text-center">Please Enter the Below details to singup:</p>
+      <form action="/register" method="post" novalidate class="validated-form">
+          <div class="hov">
+              <div>
+                  <label class='form-label' for="username">username</label>
+                  <input class='form-control' type="text" id="username" name="username" required>
+              </div>
+               <div>
+                  <label class='form-label' for="password">password</label>
+                  <input class='form-control' type="password" id="password" name="password" required>
+              </div>
+              <div>
+                  <label class='form-label'  for="Email">Email</label>
+                  <input class='form-control' type="email" id="Email" name="Email" required>
+              </div>
+              <div>
+                  <label   for="phone">phone</label>
+                  <input  class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+              </div>
+          
+              <div>
+              <label   for="DOB">Date of Birth</label>
+              <input  class="form-control" type="date" id="DOB" name="DOB" min="1990-01-01" max="2023-12-31" required>
+              </div><br>
+              <div>
+              <input  type="checkbox" id="sms alert" name="sms alert">
+              <label   for="sms alert">SMS Alert</label>
+              </div>
+              <div>
+              <input  type="checkbox" id="email alert" name="email alert">
+              <label   for="email alert">Email Alert</label>
+             </div>
+          <p>Please Enter your gender:</p>
+              <div>
+                  <input class="form-check-input" type="radio" id="male" name="gender" value="male" required>
+                  <label class='form-label'  for="male">Male</label><br>
+                  <input class="form-check-input" type="radio" id="female" name="gender" value="female" required>
+                  <label class='form-label' for="female">Female</label>
+              </div>
+          <div>
+              <p>Please select the course of your choice:
+                  <select class= 'form-select' name="course" id="course">
+                      <option value="C">C</option>
+                      <option value="C++">C++</option>
+                      <option value="Java">Java</option>
+                      <option value="JavaScript">JavaScript</option>
+                  </select>
+              </p>
+      
+          </div>
+      
+            <div class="but">
+            <p>
+                <button class='btn btn-danger' type="reset">Reset</button>
+                <button class='btn btn-success' type="submit">Register</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>  
+<script src='/js/validateform.js'></script>
+
+   <%- include('../partials/footer') %>

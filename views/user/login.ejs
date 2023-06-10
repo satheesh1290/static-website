@@ -1,0 +1,34 @@
+
+<%- include('../partials/head') %>
+
+<%- include('../partials/navbar') %>
+
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="container vh-100">
+        <%- include('../partials/flash') %>
+        <div class="bg-dark-subtle p-1 text-dark w-50 mx-auto">
+          <div class="row">
+          
+                <div class="col-6 offset-3">
+                  <form action="/login" method="post"  novalidate class="validated-form">
+                    <h3>Login Page</h3>
+                    
+                    <div class="mb-3 ">
+                      <label for="username" class="form-label">UserName</label>
+                      <input type="username" class="form-control" name="username" id="username" aria-describedby="user" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input type="password" class="form-control" name='password' id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                  
+                </div>
+            </div>
+      </div>
+      
+</div>
+</div>
+<%- include('../partials/footer') %>

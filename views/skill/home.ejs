@@ -1,0 +1,148 @@
+<%- include('../partials/head') %>
+    <!-- <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">   -->
+    <%- include('../partials/navbar') %>
+<div class="container .bg-info-subtle ms-5">
+    <%- include('../partials/flash') %>
+        <h1 class="text-center">Bootstrap Demo</h1>
+        <div class="d-flex">
+        <header class='space'> 
+            <!-- <img src="Images/img 1.jpg" alt="Skill Development Image"></div> -->
+            <div class="welcome">
+                    <p>Welcome</p> 
+                                    
+            </div>
+        </header>
+      
+    </div>
+     <div class="row mb-2 mt-2">
+        <div class="d-flex flex-row mb-3">
+                <div class="col d-flex flex-column js1">
+                    <!-- <div class="js1"> -->
+                    <p id="java" class="java"><span>Java</span> is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+                    
+                    <p class="c">
+                        <span>C</span> is a general-purpose computer programming language
+                    </p>   
+                
+                    <!-- </div> -->
+                </div>
+            <div class="col d-flex flex-column js1">
+            <p class="C1">
+                <span>C++ </span>is a high-level general-purpose programming language created
+            </p>
+
+            <p i="js" class="js"><span>JavaScript, often abbreviated as JS,</span> is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.</p>
+               
+            </div>   
+        </div>
+        <!-- </div>  -->
+        
+            <div class="col d-flex flex-column">   
+                    <div class="price">
+                    <p><b>!!! Hello<i>  world !!!</i></b></p>
+                    <!-- <img src="/Images/special.jpg" alt="special price" width="80" height="100"> -->
+                    </div>
+                    <div class="np">
+                    <p class="o"><del>old price $300</del></p> <P class="n"><b><ins>new price $200</ins></b></p> 
+                    </div>
+            </div>
+            <div class="col d-flex flex-column"> 
+                            <div class="courselist">
+                            <h3>Courses Available</h3>
+                            <ul>
+                                <li>C</li>
+                            <li>C++</li>
+                            <li>Java</li>  
+                            <li>JavaScript</li>
+                            </ul>
+                            </div>
+            </div>
+            <div class="col d-flex flex-column"> 
+                             <div class="courselist">
+                              <h3 id="JS">JavaScript</h3>
+                            <ul type="i">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                            </ul>
+                        </div>
+            </div>
+      <def>
+          <dt class="html_css text-center">Html and CSS</dt>
+          <dd>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</dd>
+      </def>
+      <br>
+      <br>
+      <h2 class="text-center">Programing Languages</h2>
+      <table class="text-center m-4">
+          <thead>
+              <th class="sp text-center" colspan="4">Special Discounts available </th>
+              <tr>
+                  <th>Combo</th>
+                  <th>Courses</th>
+                  <th>Price</th>
+                  <th>Duration</th>
+              </tr>
+          </thead>
+         <tbody>
+          
+          <tr>
+              <!-- <th columnspan="4">hello</th> --> 
+              <td class="only" rowspan="4"><b><ins><img src="/Images/special.jpg" alt="special price" width="80" height="100"></ins></b></td>
+              <td>C</td>
+              <td>$150</td>
+              <td rowspan="4"><b>3 Months</b></td>
+          </tr>
+          <tr>
+              <td>C++</td>
+              <td>$160</td>
+          </tr>
+          <tr>
+              <td>Java</td>
+              <td>$180</td>
+          </tr>
+          <tr>
+              <td>JavaScript</td>
+              <td>$200</td>
+          </tr>
+      
+         </tbody>
+      </table><br>
+      
+       <div class="col align-self-center"> 
+            <form action="https://www.google.com" target="_blank" method='get'>
+                <div class="google"><b>
+                <!-- <input type="url" id="search" name="search"></div> -->
+                 <input class="img" id="search" type="image" name="search" src="Images/sub.jpg" width="100" height="50">
+                 <label for="search">click to search in google</label></b>
+                 </div>
+            </form>
+        </div>   
+
+        <div class="col justify-self-center mt-2"> 
+                    <div class="map">   
+                    <p><b>Map Directions</b></p> 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15548.881696651928!2d80.17633579999999!3d13.021630599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1677743743933!5m2!1sen!2sin" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div> 
+        </div>
+        <div class="row">
+            <div class="col align-self-center mx-4">
+                <div class="music">
+                    <p class="music1"><b><i>Relax with Music</i></b></p>
+                    
+                    <audio src="Images/Roja.mp3" controls>audio format not supported by your browser</audio>
+                    
+                </div>
+            </div>
+                <div class="col">
+                        <div class="video">
+                            <p><b>HTML sample Video</b></p>
+                            <video src="Images/Html Sample.mp4" controls width="400"></video>
+                        </div>
+                </div>
+             
+        </div>
+    </div>   
+   <!-- </div> -->
+   <%- include('../partials/footer') %> 
+</div>
+

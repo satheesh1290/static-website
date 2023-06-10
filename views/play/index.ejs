@@ -1,0 +1,37 @@
+<%- include('../partials/head') %>
+
+  
+  <%- include('../partials/navbar') %>
+
+<div class="bg-secondary-subtle bg-opacity-50">
+  <div class="container mb-3 ms-5">
+        <h1 class="text-center">Welcome</h1>
+        <%- include('../partials/flash') %>
+        <div>
+            <a class='btn btn-success mb-3' href="/plays/new">Add new post</a>
+        </div>
+        <% for (let play of plays){%>
+        <div class="card mb-3 bg-success p-2 text-dark bg-opacity-10">
+            <div class="row">
+                <div class="col-md-4">
+                    <% if(play.images.length){ %>
+                    <img class="img-fluid" alt="" src="<%=play.images[0].url%>">
+                    <% } else { %>
+                        <img class="img-fluid" alt="" src="https://res.cloudinary.com/dm3dtfqhe/image/upload/v1685941901/play/evz6v6cla7tt5msonbxw.png">
+                        <% } %>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= play.title %> </h5>
+                        <p class="card-text"><%= play.description %></p>
+                        <a class="btn btn-primary" href="/plays/<%=play._id%>">View <%=play.title%></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }%>
+       
+</div>
+<%- include('../partials/footer') %>
+</div>

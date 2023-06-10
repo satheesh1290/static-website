@@ -1,0 +1,33 @@
+<%- include('../partials/head') %>
+
+  
+  <%- include('../partials/navbar') %>
+<div class="bg-success p-2 text-dark bg-opacity-25">  
+<div class="container mb-3">
+      
+      <%- include('../partials/flash') %>
+   <h1><%= name  %>-<%= team %></h1>
+
+   <div class="row d-flex">
+      
+
+          <article>
+          <% for(let dts of details){ %>
+              <div class="col text-center">
+                  <div class="text mt-2">
+                    <p><b><%= dts.title %></b></p>
+                  </div>
+                <% if(dts.img){ %>
+                    <img src="<%= dts.img %>" class="img-fluid rounded img-thumbnail w-50 h-50" alt="images">
+                <% } %>
+              </div>
+            <% } %>
+          </article>
+   
+      
+    </div>
+</div>
+<%- include('../partials/footer') %>
+</div>
+
+ 

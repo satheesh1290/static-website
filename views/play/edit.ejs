@@ -1,0 +1,47 @@
+<%- include('../partials/head') %>
+
+  
+  <%- include('../partials/navbar') %>
+<div class="container">
+  <div class="bg-secondary-subtle bg-opacity-50">
+            <div class="row">
+                <h4 class="text-center m-3">Edit Post</h4>
+                <%- include('../partials/flash') %>
+                <div class="col-6 offset-3">
+                    <div class="col-6 offset-3">
+                        <form action="/plays/<%=play._id%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label class="form-label" for="title">Title</label>
+                                <input class="form-control" type="text" id="title" name="play[title]" value='<%= play.title %>' autofocus required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="image">Add Images</label>
+                                <input class="form-control" type="file" id="image" name="image" multiple>
+                            </div>
+                            <div class="mb-3">
+                                <% play.images.forEach(function(img, i) {  %>
+                                <img src="<%=img.thumbnail%>" class="img-thumbnail" alt="">
+                                <div class="form-check-inline">
+                                    <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%=img.filename%>">
+                                    <label for="image-<%=i%>">Delete?</label>
+                                </div>
+                               
+                                <% })%>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="description">Description</label>
+                                <textarea class="form-control" type="text" id="description" name="play[description]" required><%= play.description %></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-success">update Post</button>
+                                <a class="card-link btn btn-dark" href="/plays/<%=play._id%>">Cancel</a> 
+                            </div>
+                        </form>
+            
+                        </div>
+                    </div>
+            </div>
+            </div>
+            <script src='/js/validateform.js'></script>
+            <%- include('../partials/footer') %>
+ </div>
