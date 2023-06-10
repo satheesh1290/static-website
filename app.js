@@ -111,7 +111,7 @@ app.use(
             scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
             styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
             workerSrc: ["'self'", "blob:"],
-            objectSrc: [],
+            objectSrc: ["'self'"],
             "form-action":["'self'", "https://www.google.com"],
             //  'frame-ancestors': ["'self'"],
             imgSrc: [
